@@ -305,7 +305,7 @@ int ku_page_fault(char _pid, char _va){
                 *(char*)pdeAddr = pde;
             }
         }
-        // pt는 swap영역으로 가지 않기때문에 swap space확인 안함
+        // pmd는 swap영역으로 가지 않기때문에 swap space확인 안함
     }
     else{
         pmdbr = ku_mmu_pmem_address + (pdeVPN*PAGE_SIZE);
